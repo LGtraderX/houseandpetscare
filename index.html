@@ -72,8 +72,13 @@
       padding: 40px 20px;
     }
 
-    h2 { color: #1e4f9a; margin: 28px 0 10px; }
+    h2 {
+      color: #1e4f9a;
+      margin: 28px 0 10px;
+    }
+
     p { line-height: 1.6; margin: 10px 0; }
+
     ul { padding-left: 18px; margin: 10px 0 0; }
 
     .highlight {
@@ -83,27 +88,33 @@
       margin: 22px 0 26px;
     }
 
-    .highlight-title { display: block; font-weight: bold; margin-bottom: 8px; }
+    .highlight-title {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
 
+    /* TRUST / ROVER */
     .trust-card {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       margin: 16px 0 28px;
-      padding: 14px 16px;
+      padding: 16px 18px;
       background: #f7fbfe;
       border: 1px solid #e1f0f8;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .trust-card img {
-      width: 86px;
-      height: 86px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
-      object-fit: cover;
-      flex: 0 0 auto;
-      border: 2px solid #ffffff;
+      object-fit: contain;
+      background-color: #ffffff;
+      padding: 6px;
       box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+      flex: 0 0 auto;
     }
 
     .trust-stars {
@@ -116,12 +127,17 @@
     }
 
     .price { font-weight: bold; margin-top: 8px; }
+
     .cta-bottom { margin-top: 18px; }
+
     .fineprint { font-size: 13px; opacity: 0.9; }
 
     @media (max-width: 520px) {
       .hero h1 { font-size: 26px; }
-      .trust-card { flex-direction: column; align-items: flex-start; }
+      .trust-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -173,8 +189,9 @@
 
     <h2>Trusted by Pet Parents</h2>
     <div class="trust-card">
-      <!-- OPTIONAL photo: rename your file to assets/img/lg-care.jpg if you want a face/brand photo -->
+      <!-- PHOTO -->
       <img src="assets/img/lg-rover.jpg" alt="LG CARE - Trusted caregiver">
+
       <div>
         <p class="trust-stars">★★★★★ 4.9 / 5 · 81 verified reviews</p>
         <p class="trust-sub">
