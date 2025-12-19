@@ -28,7 +28,7 @@
       width: 120px;
       max-width: 100%;
       display: block;
-      margin: 0 auto 12px;
+      margin: 0 auto 10px;
     }
 
     .hero h1 {
@@ -38,9 +38,10 @@
     }
 
     .hero p {
-      margin-top: 6px;
+      margin: 6px 0 0;
       font-size: 14px;
       opacity: 0.95;
+      line-height: 1.45;
     }
 
     .btn {
@@ -55,9 +56,7 @@
       margin: 6px;
     }
 
-    .btn:hover {
-      background-color: #176f92;
-    }
+    .btn:hover { background-color: #176f92; }
 
     .btn-secondary {
       background-color: #ffffff;
@@ -65,9 +64,7 @@
       border: 2px solid #ffffff;
     }
 
-    .btn-secondary:hover {
-      background-color: #e9f6fb;
-    }
+    .btn-secondary:hover { background-color: #e9f6fb; }
 
     .container {
       max-width: 900px;
@@ -75,40 +72,56 @@
       padding: 40px 20px;
     }
 
-    h2 {
-      color: #1e4f9a;
-      margin-bottom: 10px;
-    }
-
-    p {
-      line-height: 1.6;
-    }
+    h2 { color: #1e4f9a; margin: 28px 0 10px; }
+    p { line-height: 1.6; margin: 10px 0; }
+    ul { padding-left: 18px; margin: 10px 0 0; }
 
     .highlight {
       background-color: #e9f6fb;
       border-left: 4px solid #1f8dbb;
       padding: 14px 18px;
-      margin: 24px 0 32px;
+      margin: 22px 0 26px;
     }
 
-    .highlight-title {
-      display: block;
+    .highlight-title { display: block; font-weight: bold; margin-bottom: 8px; }
+
+    .trust-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 16px 0 28px;
+      padding: 14px 16px;
+      background: #f7fbfe;
+      border: 1px solid #e1f0f8;
+      border-radius: 10px;
+    }
+
+    .trust-card img {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex: 0 0 auto;
+      border: 2px solid #ffffff;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    }
+
+    .trust-stars {
       font-weight: bold;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
-    ul {
-      padding-left: 18px;
-      margin-top: 10px;
+    .trust-sub {
+      margin: 6px 0 0;
     }
 
-    .price {
-      font-weight: bold;
-      margin-top: 8px;
-    }
+    .price { font-weight: bold; margin-top: 8px; }
+    .cta-bottom { margin-top: 18px; }
+    .fineprint { font-size: 13px; opacity: 0.9; }
 
-    .cta-bottom {
-      margin-top: 20px;
+    @media (max-width: 520px) {
+      .hero h1 { font-size: 26px; }
+      .trust-card { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -121,6 +134,7 @@
 
     <h1>Home-Style Dog Boarding & Day Care</h1>
     <p>Calm • Safe • Limited • Trusted</p>
+    <p class="fineprint">Serving Mountainside, Summit, Westfield & nearby areas.</p>
 
     <a class="btn" href="tel:+19083434897">Call or Text Now</a>
 
@@ -131,8 +145,8 @@
   </div>
 
   <div class="container">
-    <h2>Not a Kennel. A Real Home.</h2>
 
+    <h2>Not a Kennel. A Real Home.</h2>
     <p>
       House & Pets Care offers a quiet, home-style environment for dogs who need
       attention, routine, and comfort — not cages or overcrowded facilities.
@@ -140,10 +154,34 @@
 
     <div class="highlight">
       <span class="highlight-title">Limited availability.</span>
-      <p>
+      <p style="margin:0;">
         We accept only a small number of dogs at a time to ensure quality care,
         supervision, and a stress-free experience.
       </p>
+      <p style="margin:10px 0 0; font-weight:bold;">
+        Holiday availability is extremely limited. Reservations are confirmed only with advance payment.
+      </p>
+    </div>
+
+    <h2>Why Families Trust Us</h2>
+    <ul>
+      <li>Private home-based care (not a kennel)</li>
+      <li>Limited dogs at a time for calm supervision</li>
+      <li>Structured routine and clean indoor environment</li>
+      <li>Direct communication — quick responses</li>
+    </ul>
+
+    <h2>Trusted by Pet Parents</h2>
+    <div class="trust-card">
+      <!-- OPTIONAL photo: rename your file to assets/img/lg-care.jpg if you want a face/brand photo -->
+      <img src="assets/img/lg-rover.jpg" alt="LG CARE - Trusted caregiver">
+      <div>
+        <p class="trust-stars">★★★★★ 4.9 / 5 · 81 verified reviews</p>
+        <p class="trust-sub">
+          <strong>LG CARE</strong> is a 5-star rated caregiver on Rover with over 80 verified reviews.
+          Trusted by families in Mountainside and nearby areas.
+        </p>
+      </div>
     </div>
 
     <h2>Services</h2>
@@ -156,7 +194,6 @@
 
     <h2>Pricing</h2>
     <p class="price">$70 per dog / per day</p>
-
     <p>
       Boarding & Day Care<br>
       Reservation and payment required in advance.
@@ -165,6 +202,7 @@
     <div class="cta-bottom">
       <a class="btn" href="tel:+19083434897">Call or Text for Availability</a>
     </div>
+
   </div>
 
 </body>
